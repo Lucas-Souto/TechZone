@@ -1,0 +1,142 @@
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+:root {
+  --neon-green: #36f400;
+  --neon-green-dark: #2fd400;
+  --neon-green-77opc: rgba(54, 244, 0, 0.77);
+  --neon-green-gradient: linear-gradient(
+    90deg,
+    rgba(54, 244, 0, 1) 0%,
+    rgba(0, 244, 98, 0.7) 100%
+  );
+  --text-shadow: 0px 0px 5px black;
+  --text-background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+  border-left: 2px dotted var(--neon-green);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon-green);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-green-dark);
+}
+
+main ::-webkit-scrollbar {
+  width: 14px;
+}
+
+main ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-left: none;
+}
+
+main ::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+}
+
+main ::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+img {
+  color: white;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 20vh minmax(70vh, auto) minmax(10vh, auto);
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  background: black;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  grid-area: header;
+  text-align: center;
+  border-bottom: solid 2px var(--neon-green);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Merriweather", sans-serif;
+}
+
+header,
+footer {
+  background: black;
+  width: 100%;
+  color: white;
+}
+
+.logo-img {
+  max-width: 40%;
+}
+
+.nav-link,
+.dropdown-item {
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.15s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+  border-bottom: 1px solid var(--neon-green);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.navbar {
+  min-height: 100%;
+  width: 100%;
+}
+
+.navbar-collapse {
+  justify-content: end;
+}
+
+.navbar-nav {
+  flex-basis: 60%;
+  justify-content: flex-end;
+  background: black;
+}
+
+main {
+  grid-area: main;
+  padding: 5px;
+}
+
+footer {
+  grid-area: footer;
+  border-top: solid 2px var(--neon-green);
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.35em;
+  font-family: "Montserrat", "Merriweather", sans-serif;
+  padding: 1em;
+}
+
+.sobre-nos,
+.contatos-footer {
+  color: var(--neon-green);
+}
+
+.sobre-desc {
+  font-size: 0.6em;
+}
