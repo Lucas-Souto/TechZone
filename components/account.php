@@ -64,12 +64,14 @@ elseif (substr($_SERVER['REQUEST_URI'], 0, 24) === "/pages/registerAdmin.php")
         <p>2.Ocorreu um erro no servidor. Tente novamente mais tarde.</p>
       </div>";
     }
-    else if (isset($_GET['success']) && $_GET['success']){
+    else if (isset($_GET['success']) && $_GET['success'])
+    {
       echo "<div style='color: LawnGreen;'>
         <h2>Alterações bem sucedidas!</h2>
       </div>";
     }
-    else if (isset($_GET['noChanges']) && $_GET['noChanges']){
+    else if (isset($_GET['noChanges']) && $_GET['noChanges'])
+    {
       echo "<div style='color: black;'>
         <h2>Não houve alterações.</h2>
       </div>";

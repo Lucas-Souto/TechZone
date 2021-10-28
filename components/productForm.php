@@ -62,24 +62,28 @@ if (substr($_SERVER['REQUEST_URI'], 0, 22) === "/pages/editProduct.php")
   <h5 class="text-center mb-4"><?php echo $title; ?></h5>
   <form id="productForm" class="form-card" action="<?php echo $handler; ?>" enctype="multipart/form-data" method="POST">
     <?php
-    if (isset($_GET['internalError']) && $_GET['internalError']){
+    if (isset($_GET['internalError']) && $_GET['internalError'])
+    {
       echo "<div style='color: red;'>
         <h2>Ops... Algo deu errado!</h2>
         <p>Ocorreu um erro no servidor. Tente novamente mais tarde.</p>
       </div>";
     }
-    else if (isset($_GET['notFounded']) && $_GET['notFounded']){
+    else if (isset($_GET['notFounded']) && $_GET['notFounded'])
+    {
       echo "<div style='color: red;'>
         <h2>Ops... Algo deu errado!</h2>
         <p>Não encontramos nenhum produto com o id \"{$id}\".</p>
       </div>";
     }
-    else if (isset($_GET['success']) && $_GET['success']){
+    else if (isset($_GET['success']) && $_GET['success'])
+    {
       echo "<div style='color: LawnGreen;'>
         <h2>Alterações bem sucedidas!</h2>
       </div>";
     }
-    else if (isset($_GET['noChanges']) && $_GET['noChanges']){
+    else if (isset($_GET['noChanges']) && $_GET['noChanges'])
+    {
       echo "<div style='color: black;'>
         <h2>Não houve alterações.</h2>
       </div>";
