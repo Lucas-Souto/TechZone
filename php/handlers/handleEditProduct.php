@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 	{
 		if ($_POST['action'] == 'edit')
 		{
-			if (!empty($_FILES['file'])) move_uploaded_file($_FILES['file']['tmp_name'], $dir);
+			if (!empty($_FILES['file']['name'])) move_uploaded_file($_FILES['file']['tmp_name'], $dir);
 
 			$desc = strlen($_POST['desc']) === 0 ? NULL : $_POST['desc'];
 			$data = array(
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 	if ($result) header("Location: ../../pages/editProduct.php?success=true");
 	else
 	{
-		if (!empty($_FILES['file'])) header("Location: ../../pages/editProduct.php?success=true");
+		if (!empty($_FILES['file']['name'])) header("Location: ../../pages/editProduct.php?success=true");
 		else header("Location: ../../pages/editProduct.php?noChanges=true");
 	}
 }
