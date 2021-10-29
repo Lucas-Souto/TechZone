@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 	if ($result) header("Location: ../../pages/editProduct.php?success=true");
 	else
 	{
-		if (!empty($_FILES['file']['name'])) header("Location: ../../pages/editProduct.php?success=true");
+		if (!empty($_FILES['file']['name']) && $_POST['action'] == 'edit') header("Location: ../../pages/editProduct.php?success=true");
 		else header("Location: ../../pages/editProduct.php?noChanges=true");
 	}
 }
