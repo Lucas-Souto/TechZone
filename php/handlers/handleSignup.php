@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 	try
 	{
 		$uC = new UsersController();
-		$result = $uC->insertNewUser($data)
+		$result = $uC->insertNewUser($data);
 	}
 	catch (PDOException $e)
 	{
