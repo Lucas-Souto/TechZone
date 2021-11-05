@@ -38,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 			setcookie(session_name(), session_id(), time() + 2592000, '/', $_SERVER['SERVER_NAME']);
 
 			$_SESSION['userEmail'] = $_POST['email'];
+			$_SESSION['fullname'] = getName($_POST['fname'], $_POST['lname']);
 			$_SESSION['status'] = 'user';
 
 			header("Location: ../../index.php");
