@@ -1,6 +1,7 @@
 <?php
 require(dirname(__DIR__) . "/functions/autoLoad.php");
 require_once(dirname(__DIR__) . "/functions/logError.php");
+require_once(dirname(__DIR__) . "/functions/getName.php");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST")
 {
