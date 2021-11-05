@@ -47,7 +47,7 @@ else header("Location: ../index.php");
         <input type="hidden" name="action" value="add" />
         <label for="quantity">Quantidade:</label><br />
         <input type="number" <?php echo $quantity > 0 ? "min='1' value='1'" : "value='0'"; ?> id="quantity" name="quantity" /><br /><br />
-        <button type="submit" <?php echo $quantity > 0 ? "" : 'disabled' ?>>Adicionar ao carrinho</button>
+        <button type="submit" <?php echo $quantity > 0 && isset($_COOKIE[session_name()]) ? "" : 'disabled' ?>>Adicionar ao carrinho</button>
       </form>
     </div>
     <div id="product-description"><?php echo $desc; ?></div>
