@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 	$dir = "../../imgs/products/";
 	$htmlPath = "imgs/products/" . $fileName;
 
-	$desc = strlen($_POST['desc']) === 0 ? NULL : $_POST['desc'];
+	$desc = strlen($_POST['desc']) === 0 ? "Sem descrição... :(" : $_POST['desc'];
 	$data = array(
 		[$_POST['name'], PDO::PARAM_STR],
 		[$_POST['price'], PDO::PARAM_STR],

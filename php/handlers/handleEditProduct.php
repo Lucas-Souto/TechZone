@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 		{
 			if (!empty($_FILES['file']['name'])) move_uploaded_file($_FILES['file']['tmp_name'], $dir);
 
-			$desc = strlen($_POST['desc']) === 0 ? NULL : $_POST['desc'];
+			$desc = strlen($_POST['desc']) === 0 ? "Sem descrição... :(" : $_POST['desc'];
 			$data = array(
 				[$_POST['name'], PDO::PARAM_STR],
 				[$_POST['price'], PDO::PARAM_STR],
