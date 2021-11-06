@@ -36,10 +36,8 @@ class UsersController extends DatabaseConfig
 
 			$result = $result && $statement->execute();
 		}
-		
-		$result = $statement->execute();
 
-		return $result ? $statement->rowCount() : 0;
+		return $statement->execute();
 	}
 
 	public function getUserData($email)
